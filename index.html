@@ -9,37 +9,57 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css">  
 
-    <title>Document</title>
+    <title>Weather App </title> 
 </head> 
-<body>
-  <div class="container">
-    <div class="weather-app-wrapper">
-      <div class="weather-app">
-        <div class="overview">
-          <h1 id =Ballito> Ballito</h1>
-          <ul>
-            <li>Monday<span id=time> 13:00</span></li>
-            <li desp="Showers"> Showers</li>
-          </ul>
-        </div>
+<div class="container">
+  <div class="weather-app-wrapper">
+    <div class="weather-app">
+      <form id="search-form" class="mb-3">
         <div class="row">
-          <div class="col-6">
-            <div class="clearfix weather-temperature">
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear" id="rain" class="float-left" />
-              <div class="float-left">
-                <strong id="tem">12</strong
-                ><span class="units"> °C | F</span>
-              </div>
+          <div class="col-9">
+            <input
+              type="search"
+              placeholder="Type a city.."
+              class="form-control"
+              id="city-input"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Search"
+              class="btn btn-primary w-100"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="overview">
+        <h1 id="city"> Ballito</h1>
+        <ul>
+          <li>Monday 15:00 <span id="date"></span></li>
+          <li id="description"> Clear</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="clearfix weather-temperature">
+            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear" id="icon" class="float-left" />
+            <div class="float-left">
+              <strong id="temperature"></strong
+              ><span class="units"> °C | F </span>
             </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>10%</li>
-              <li>Wind: <span id="wind"></span>3 m/h</li>
-            </ul>
-          </div>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Humidity: <span id="humidity"></span>20%</li>
+            <li>Wind: <span id="wind"></span>3 km/h</li>
+          </ul>
         </div>
       </div>
+      <div class="weather-forecast" id="forecast"></div>
+    </div>
 <small> 
  <a href="https://github.com/kirtany/weather.app/tree/main"> Open-source-code by Kirtanya Bhagwandin </a> 
 </small> </div>

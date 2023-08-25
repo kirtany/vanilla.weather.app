@@ -73,7 +73,7 @@ function formatDate(timestamp) {
     axios.get(apiUrl).then(displayForecast);
   }
   
-  function displayTemperature(response) {
+  function displayTemperature(response); {
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#description");

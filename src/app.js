@@ -114,7 +114,7 @@ axios.get(apiUrl).then(displayTemperature);
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
-  }
+    }
   
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", handleSubmit);

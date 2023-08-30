@@ -28,10 +28,9 @@ function searchyourCity(event) {
 } 
 function displayForecast(){
   let forecastElement= document.querySelector("#forecast");
-
-  let forecastHTML = `<div class="row">`;
-let days= ["Thur", "Fir" ,"Sat" ,"Sun" ];
-days.forEach[function (day){
+  let days= ["Thur", "Fir" ,"Sat" ,"Sun" ];
+  let forecastHTML = `<div class="row">`; 
+ days.forEach(function (day){
   forecastHTML=
   forecastHTML + `
  <div class="col-2"> 
@@ -47,7 +46,7 @@ days.forEach[function (day){
  </div>
   
  `; 
-}];
+});
   forecastHTML= forecastHTML+`</div>`;
   forecastElement.innerHTML= forecastHTML; 
   console.log(forecastHTML);
